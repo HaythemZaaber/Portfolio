@@ -13,6 +13,8 @@ import { FloatingNav } from "@/Components/ui/FloatingNav";
 import RecentProjects from "@/Components/RecentProjects";
 import Clients from "@/Components/Clients";
 import Link from "next/link";
+import Experience from "@/Components/Experience";
+import Approach from "@/Components/Approach";
 
 const Home = () => {
   return (
@@ -23,9 +25,9 @@ const Home = () => {
         <Grid />
         <RecentProjects />
         <Clients />
-        {/* <Experience /> 
+        <Experience />
         <Approach />
-        <Footer /> */}
+        {/* <Footer />  */}
       </div>
       <div id="#" className=" fixed z-30 bottom-10 right-10">
         <Link href={"#hero"}>
