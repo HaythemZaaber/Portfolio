@@ -15,6 +15,7 @@ import Clients from "@/Components/Clients";
 import Link from "next/link";
 import Experience from "@/Components/Experience";
 import Approach from "@/Components/Approach";
+import Footer from "@/Components/Footer";
 
 const Home = () => {
   return (
@@ -27,7 +28,7 @@ const Home = () => {
         <Clients />
         <Experience />
         <Approach />
-        {/* <Footer />  */}
+        <Footer /> 
       </div>
       <div id="#" className=" fixed z-30 bottom-10 right-10">
         <Link href={"#hero"}>

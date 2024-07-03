@@ -6,7 +6,7 @@ import MagicButton from "./ui/MagicButton";
 
 const Approach = () => {
   return (
-    <div id="testimonials" className="w-full py-20">
+    <section id="testimonials" className="w-full py-20">
       <h1 className="heading">
         My
         <span className="text-purple"> approach</span>
@@ -20,7 +20,7 @@ const Approach = () => {
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
-            containerClassName="bg-emerald-900"
+            containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
           />
         </Card>
         <Card
@@ -30,10 +30,11 @@ const Approach = () => {
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-black"
+            containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
             colors={[
-              [236, 72, 153],
-              [232, 121, 249],
+              // change the colors of the
+              [255, 166, 158],
+              [221, 255, 247],
             ]}
             dotSize={2}
           />
@@ -47,12 +48,12 @@ const Approach = () => {
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-sky-600"
+            containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
             colors={[[125, 211, 252]]}
           />
         </Card>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -72,12 +73,19 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  w-[60vw] mx-auto p-7 lg:p-4  lg:h-[35rem] relative rounded-3xl"
+      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]   max-w-sm w-full mx-auto p-7 lg:p-4  lg:h-[35rem] relative rounded-3xl"
+      style={{
+        //   add these two
+        //   you can generate the color from here https://cssgradient.io/
+        background: "rgb(4,7,29)",
+        backgroundColor:
+          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+      }}
     >
-      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+      <Icon className="absolute h-10 w-10 -top-3 -left-3 dark:text-white text-black opacity-30" />
+      <Icon className="absolute h-10 w-10 -bottom-3 -left-3 dark:text-white text-black opacity-30" />
+      <Icon className="absolute h-10 w-10 -top-3 -right-3 dark:text-white text-black opacity-30" />
+      <Icon className="absolute h-10 w-10 -bottom-3 -right-3 dark:text-white text-black opacity-30" />
 
       <AnimatePresence>
         {hovered && (
